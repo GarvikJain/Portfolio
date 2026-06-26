@@ -30,7 +30,7 @@ The site utilizes a Y2K Neo-Brutalist aesthetic inspired by Windows 98 desktop e
 7. **Languages Section (`Languages.tsx`)**:
    - Displays English, Hindi, Kannada, and French proficiencies using retro segmented bars supporting fractional fills.
 8. **Achievements & Certifications**:
-   - Houses academic and course honors (VIT Chennai Meritorious Award Rank-1, Google AI, NPTEL Public Speaking Top 1%, IIT Kanpur, Deloitte Tech Consulting).
+   - Houses academic and course honors.
 
 ---
 
