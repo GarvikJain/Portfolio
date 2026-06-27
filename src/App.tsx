@@ -129,16 +129,20 @@ export default function App() {
           _subject: `New Portfolio Message from ${contactForm.name}`
         })
       })
-      .then(res => res.json())
-      .then(data => {
-        if (data.success === "true" || data.success === true) {
+      .then(async res => {
+        const data = await res.json();
+        return { ok: res.ok, status: res.status, data };
+      })
+      .then(({ ok, status, data }) => {
+        if (ok && (data.success === "true" || data.success === true)) {
           setToastMessage('System: Message sent successfully! response_code: 200');
         } else {
-          setToastMessage('System Error: Mail transport failed. code: 500');
+          const errMsg = data.message || 'Mail transport failed.';
+          setToastMessage(`System Alert: ${errMsg} code: ${status}`);
         }
       })
       .catch(() => {
-        setToastMessage('System Error: Mail transport failed. code: 500');
+        setToastMessage('System Error: Network connection failed. code: 500');
       });
 
       setContactForm({ name: '', email: '', message: '' });
