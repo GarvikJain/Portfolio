@@ -14,7 +14,7 @@ export default function Terminal() {
     { text: '', type: 'output' },
   ]);
   const [input, setInput] = useState('');
-  const terminalEndRef = useRef<HTMLDivElement>(null);
+  const terminalScrollRef = useRef<HTMLDivElement>(null);
   const isMounted = useRef(false);
 
   useEffect(() => {
@@ -22,7 +22,12 @@ export default function Terminal() {
       isMounted.current = true;
       return;
     }
-    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (terminalScrollRef.current) {
+      terminalScrollRef.current.scrollTo({
+        top: terminalScrollRef.current.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
   }, [history]);
 
   const handleCommand = (cmd: string) => {
@@ -107,7 +112,7 @@ export default function Terminal() {
       </div>
 
       {/* Terminal Output */}
-      <div className="flex-1 overflow-y-auto space-y-1 pr-1 custom-scrollbar scroll-smooth">
+      <div ref={terminalScrollRef} className="flex-1 overflow-y-auto space-y-1 pr-1 custom-scrollbar scroll-smooth">
         {history.map((line, idx) => (
           <div
             key={idx}
@@ -136,7 +141,6 @@ export default function Terminal() {
             aria-label="Terminal command input"
           />
         </div>
-        <div ref={terminalEndRef} />
       </div>
     </div>
   );

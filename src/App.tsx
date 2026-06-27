@@ -123,9 +123,9 @@ export default function App() {
           "Accept": "application/json"
         },
         body: JSON.stringify({
-          Name: contactForm.name,
-          Email: contactForm.email,
-          Message: contactForm.message,
+          name: contactForm.name,
+          email: contactForm.email,
+          message: contactForm.message,
           _subject: `New Portfolio Message from ${contactForm.name}`
         })
       })
