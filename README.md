@@ -20,11 +20,7 @@ The site utilizes a Y2K Neo-Brutalist aesthetic inspired by Windows 98 desktop e
 4. **Windows Explorer DevStack (`DevStack.tsx`)**:
    - A mockup folder browser displaying programming languages, libraries/frameworks, tools, and developer domains.
 5. **Five Custom Canvas Visualizers (`ProjectGrid.tsx`)**:
-   - **Multi-Modal RAG System**: Simulates retrieval vectors moving from text chunks, image scans, and CSV sheets into a cylinder Vector DB and LLM generator.
-   - **Portfolio Website**: An auto-scaling bento grid replica displaying nested recursion (picture-in-picture) and an automated pointer action.
-   - **VIT Chennai Outing Planner**: Maps nodes (VIT Chennai, Vandalur Zoo, Marina Mall, Kovalam Beach, Mahabalipuram) responsively with travel segments and pathfinding trails.
-   - **ATS Resume Parser**: Splits canvas into JD requirements scan, a document visualizer swept by a green laser scanner with diagnostic terminal logs, and candidate scoring charts.
-   - **Mind-bodyHub**: Renders a dense 6-widget health dashboard including live heart ECG lines, activity rings, sleep cycles, hydration sloshing waves, nutrition macros, and breathing stress guides.
+   - A details of projects with visuals.
 6. **Day & Night Mode Switcher**:
    - Navbar toggle switches between **Dark Space** mode (charcoal black background, radial indigo glow, and falling stars/shooting meteor trails canvas) and **Morning Sunlight** mode (warm beige-brown background, golden morning sunbeams, and drifting air dust motes canvas).
 7. **Languages Section (`Languages.tsx`)**:
